@@ -1,0 +1,62 @@
+header {
+    border: 1px solid black;
+}
+
+header button {
+    background: blue;
+    color: white;
+    height: 50px;
+}
+
+.contenido {
+    margin-top: 20px;
+}
+
+.elemento {
+    padding-left: 5px;
+    background: rgb(219, 155, 110);
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.elemento button {
+    height: 40px;
+}
+
+form {
+    border: 1px solid black;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.eliminar {
+    background: red;
+    color: white;
+    align-self: flex-end;
+}
+
+.completado {
+    background: rgb(92, 185, 92);
+}
+
+form input {
+    width: 50%;
+}
+
+form button {
+    background: green;
+}

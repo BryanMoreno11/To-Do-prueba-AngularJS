@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lista">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="listaController">
+
+    <div class="container">
+        <header>
+            <button ng-click="cambiarEstado(true)">Insertar</button>
+        </header>
+
+        <div class="contenido">
+            <div class="elemento" ng-repeat="tarea in tareas track by $index" ng-class="{'completado':tarea.estado=='completado'}">
+                <button ng-click="modificarEstadoTarea(tarea, tarea.estado)">
+                    <p ng-if="tarea.estado=='pendiente'">
+                        Completar
+                    </p>
+                    <p  ng-if="tarea.estado=='completado'">
+                        Descompletar
+                    </p>
+                </button>
+                <p>
+                    {{tarea.nombre}}
+                </p>
+                <button ng-click="eliminar(tarea)">Eliminar</button>
+            </div>
+        </div>
+
+        <form action="" ng-class="{'active': mostrarFormulario==true}">
+            <button ng-click="cambiarEstado(false)" class="eliminar">X</button>
+            <label for="">Ingrese la tarea a realizar:</label>
+            <input type="text" name="" id="" ng-model="tarea.nombre" name="nombre">
+            <button ng-click="insertarTarea()">Guardar</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
