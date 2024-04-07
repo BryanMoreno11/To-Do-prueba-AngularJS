@@ -24,6 +24,14 @@ header button {
     height: 60px;
 }
 
+.elemento button:first-child {
+    background: greenyellow;
+}
+
+.elemento button:last-child {
+    background: rgb(221, 119, 119);
+}
+
 .elemento button {
     height: 40px;
 }
