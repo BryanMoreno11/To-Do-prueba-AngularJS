@@ -60,3 +60,7 @@ form input {
 form button {
     background: green;
 }
+
+button:hover {
+    cursor: pointer;
+}
